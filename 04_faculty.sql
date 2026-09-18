@@ -82,6 +82,11 @@ INSERT INTO Faculty
 VALUES
     (210, 'Ajay', 'MBA', '9000000010', 'ajay@gmail.com', 100);
 
+ALTER TABLE Department
+    ADD CONSTRAINT fk_department_hod
+        FOREIGN KEY (hod_id)
+        REFERENCES Faculty(faculty_id);
+
 COMMIT;
 
 
