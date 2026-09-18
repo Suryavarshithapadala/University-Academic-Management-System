@@ -87,6 +87,7 @@ VALUES
     (1010, 'Divya', 'Reddy', DATE '2003-06-20',
      'divya.reddy@university.edu', 'Hyderabad', 90);
 
+COMMIT;
 
 -- =====================================================
 -- 3. VERIFY DATA

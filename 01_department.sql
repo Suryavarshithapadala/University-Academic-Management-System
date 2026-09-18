@@ -26,53 +26,54 @@ CREATE TABLE Department (
 INSERT INTO Department
     (dept_id, dept_name, hod_id, established_year)
 VALUES
-    (10, 'CSE', 1, 2010);
+    (10, 'CSE', 201, 2010);
 
 INSERT INTO Department
     (dept_id, dept_name, hod_id, established_year)
 VALUES
-    (20, 'AIML', 2, 2020);
+    (20, 'AIML', 202, 2020);
 
 INSERT INTO Department
     (dept_id, dept_name, hod_id, established_year)
 VALUES
-    (30, 'ECE', 3, 2005);
+    (30, 'ECE', 203, 2005);
 
 INSERT INTO Department
     (dept_id, dept_name, hod_id, established_year)
 VALUES
-    (40, 'EEE', 4, 2000);
+    (40, 'EEE', 204, 2000);
 
 INSERT INTO Department
     (dept_id, dept_name, hod_id, established_year)
 VALUES
-    (50, 'MECH', 5, 1995);
+    (50, 'MECH', 205, 1995);
 
 INSERT INTO Department
     (dept_id, dept_name, hod_id, established_year)
 VALUES
-    (60, 'CIVIL', 6, 1990);
+    (60, 'CIVIL', 206, 1990);
 
 INSERT INTO Department
     (dept_id, dept_name, hod_id, established_year)
 VALUES
-    (70, 'IT', 7, 2012);
+    (70, 'IT', 207, 2012);
 
 INSERT INTO Department
     (dept_id, dept_name, hod_id, established_year)
 VALUES
-    (80, 'MBA', 8, 2008);
+    (80, 'MBA', 208, 2008);
 
 INSERT INTO Department
     (dept_id, dept_name, hod_id, established_year)
 VALUES
-    (90, 'MCA', 9, 2006);
+    (90, 'MCA', 209, 2006);
 
 INSERT INTO Department
     (dept_id, dept_name, hod_id, established_year)
 VALUES
-    (100, 'BBA', 10, 2015);
+    (100, 'BBA', 210, 2015);
 
+COMMIT;
 
 -- =====================================================
 -- 3. VERIFY DATA
@@ -81,6 +82,4 @@ VALUES
 SELECT *
 FROM Department
 ORDER BY dept_id;
-
-
 

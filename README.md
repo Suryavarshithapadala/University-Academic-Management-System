@@ -23,8 +23,10 @@ University-Academic-Management-System/
 ├── 05_course.sql           # Course catalog & instructor assignments
 ├── 06_enrollment.sql       # Student course enrollment records
 ├── 07_results.sql          # Academic evaluation & grading records
-├── 08_queries.sql          # Complex analytical queries (JOINs, Aggregates)
-├── sample_data.sql         # Master script for populating test datasets
-├── ER_Diagram.png          # Visual Entity-Relationship Diagram
-├── Project_Report.docx     # Comprehensive system documentation
 └── README.md               # Repository documentation and setup guide
+```
+
+Run the SQL files in numeric order (`01_department.sql` through
+`07_results.sql`) in an Oracle SQL Developer or SQL*Plus session. The scripts
+create and seed the tables; `07_results.sql` creates the results table but does
+not insert result records because no result sample data is supplied.

@@ -61,6 +61,7 @@ INSERT INTO Student_Phone (student_id, phone_number) VALUES (1009, '9876543218')
 -- Student 1010 (Divya Reddy)
 INSERT INTO Student_Phone (student_id, phone_number) VALUES (1010, '9876543219');
 
+COMMIT;
 
 -- =====================================================
 -- 3. VERIFY DATA

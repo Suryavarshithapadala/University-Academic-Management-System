@@ -27,19 +27,19 @@ CREATE TABLE Enrollment (
 -- 2. SAMPLE DATA
 
 INSERT INTO Enrollment
-    (enrollment_id, student_id, course_id, semester, enrollment_date)
+    (student_id, course_id, semester, enrollment_date)
 VALUES
-    (1, 1, 1, '2024-Odd', DATE '2024-07-01');
+    (1001, 301, '2024-Odd', DATE '2024-07-01');
 
 INSERT INTO Enrollment
-    (enrollment_id, student_id, course_id, semester, enrollment_date)
+    (student_id, course_id, semester, enrollment_date)
 VALUES
-    (2, 1, 2, '2024-Odd', DATE '2024-07-01');
+    (1002, 302, '2024-Odd', DATE '2024-07-01');
 
 INSERT INTO Enrollment
-    (enrollment_id, student_id, course_id, semester, enrollment_date)
+    (student_id, course_id, semester, enrollment_date)
 VALUES
-    (3, 2, 1, '2024-Odd', DATE '2024-07-01');
+    (1003, 301, '2024-Odd', DATE '2024-07-01');
 
 COMMIT;
 
