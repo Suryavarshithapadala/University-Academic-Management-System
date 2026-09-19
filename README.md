@@ -1,32 +1,146 @@
-# University-Academic-Management-System
-DBMS project for managing university academic information.
+# University Academic Management System
 
-A relational database project developed in Oracle DBMS to manage core university operations including department allocations, student profiles, faculty management, course offerings, student enrollments, and academic results.
+## 📌 Project Overview
+
+The **University Academic Management System** is a relational database project designed to manage and organize academic information within a university.
+
+The system stores and manages information related to:
+
+- Departments
+- Students
+- Student phone numbers
+- Faculty
+- Courses
+- Enrollments
+- Results
+
+The project demonstrates important **Relational Database Management System (RDBMS)** concepts such as table creation, primary keys, foreign keys, constraints, data manipulation, CRUD operations, joins, aggregate functions, grouping, and views.
 
 ---
 
-##  Project Overview
+## 🎯 Objectives
 
-The **University Academic Management System** provides a structured and normalized database architecture to streamline academic administration. The system is designed with appropriate integrity constraints (Primary Keys, Foreign Keys, Unique constraints, and Check constraints) to maintain data consistency and prevent redundancy across all academic entities.
+The main objectives of this project are:
+
+- To design a relational database for university academic management.
+- To maintain student and faculty information.
+- To manage departments and courses.
+- To record student course enrollments.
+- To maintain student results.
+- To establish relationships between different entities using foreign keys.
+- To demonstrate SQL operations such as CRUD, JOIN, GROUP BY, HAVING, aggregate functions, and views.
+- To provide a structured and maintainable database design.
 
 ---
 
-## 📂 Repository Structure
+## 🗂️ Database Entities
+
+The database consists of the following main tables:
+
+### 1. Department
+
+Stores information about university departments.
+
+**Important attributes:**
+- `dept_id`
+- `dept_name`
+- `hod_id`
+- `established_year`
+
+---
+
+### 2. Student
+
+Stores information about students.
+
+**Important attributes:**
+- `student_id`
+- `first_name`
+- `last_name`
+- `dob`
+- `email`
+- `address`
+- `dept_id`
+
+---
+
+### 3. Student_Phone
+
+Stores one or more phone numbers associated with students.
+
+**Important attributes:**
+- `student_id`
+- `phone_number`
+
+The combination of `student_id` and `phone_number` acts as the primary key.
+
+---
+
+### 4. Faculty
+
+Stores faculty information.
+
+**Important attributes:**
+- `faculty_id`
+- `faculty_name`
+- `qualification`
+- `phone`
+- `email`
+- `department_id`
+
+---
+
+### 5. Course
+
+Stores information about courses offered by departments.
+
+**Important attributes:**
+- `course_id`
+- `course_name`
+- `credits`
+- `semester`
+- `faculty_id`
+- `department_id`
+
+---
+
+### 6. Enrollment
+
+Stores information about students enrolled in courses.
+
+**Important attributes:**
+- `enrollment_id`
+- `student_id`
+- `course_id`
+- `semester`
+- `enrollment_date`
+
+---
+
+### 7. Results
+
+Stores the results associated with student enrollments.
+
+**Important attributes:**
+- `result_id`
+- `enrollment_id`
+- `marks_obtained`
+- `total_marks`
+- `grade`
+- `exam_date`
+
+---
+
+## 🔗 Database Relationships
+
+The major relationships between the tables are:
 
 ```text
-University-Academic-Management-System/
-│
-├── 01_department.sql       # Department entity schema & seed data
-├── 02_student.sql          # Student profiles schema & seed data
-├── 03_student_phone.sql    # Multi-valued student contact numbers
-├── 04_faculty.sql          # Faculty details & department mappings
-├── 05_course.sql           # Course catalog & instructor assignments
-├── 06_enrollment.sql       # Student course enrollment records
-├── 07_results.sql          # Academic evaluation & grading records
-└── README.md               # Repository documentation and setup guide
-```
-
-Run the SQL files in numeric order (`01_department.sql` through
-`07_results.sql`) in an Oracle SQL Developer or SQL*Plus session. The scripts
-create and seed the tables; `07_results.sql` creates the results table but does
-not insert result records because no result sample data is supplied.
+Department
+ ├── Student
+ │    └── Student_Phone
+ │
+ └── Faculty
+      └── Course
+           └── Enrollment
+                └── Results
