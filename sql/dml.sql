@@ -347,7 +347,6 @@ VALUES
 -- ============================================================
 -- 7. ENROLLMENT DATA
 -- ============================================================
-
 INSERT INTO Enrollment
     (enrollment_id, student_id, course_id, semester, enrollment_date)
 VALUES
@@ -364,9 +363,20 @@ VALUES
 -- ============================================================
 -- 8. RESULTS DATA
 -- ============================================================
+INSERT INTO Results
+(result_id, enrollment_id, marks_obtained, total_marks, grade, exam_date)
+VALUES
+(1, 1, 92, 100, 'A+', DATE '2024-10-15');
 
--- No sample Result records were supplied.
+INSERT INTO Results
+(result_id, enrollment_id, marks_obtained, total_marks, grade, exam_date)
+VALUES
+(2, 2, 85, 100, 'A', DATE '2024-10-15');
 
+INSERT INTO Results
+(result_id, enrollment_id, marks_obtained, total_marks, grade, exam_date)
+VALUES
+(3, 3, 76, 100, 'B+', DATE '2024-10-15');
 
 -- ============================================================
 -- 9. COMMIT
