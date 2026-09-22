@@ -349,20 +349,17 @@ VALUES
 -- ============================================================
 
 INSERT INTO Enrollment
-    (student_id, course_id, semester, enrollment_date)
+    (enrollment_id, student_id, course_id, semester, enrollment_date)
 VALUES
-    (1001, 301, '2024-Odd', DATE '2024-07-01');
-
+    (1, 1001, 301, '2024-Odd', DATE '2024-07-01');
 INSERT INTO Enrollment
-    (student_id, course_id, semester, enrollment_date)
+    (enrollment_id, student_id, course_id, semester, enrollment_date)
 VALUES
-    (1002, 302, '2024-Odd', DATE '2024-07-01');
-
+    (2, 1002, 302, '2024-Odd', DATE '2024-07-01');
 INSERT INTO Enrollment
-    (student_id, course_id, semester, enrollment_date)
+    (enrollment_id, student_id, course_id, semester, enrollment_date)
 VALUES
-    (1003, 301, '2024-Odd', DATE '2024-07-01');
-
+    (3, 1003, 301, '2024-Odd', DATE '2024-07-01');
 
 -- ============================================================
 -- 8. RESULTS DATA
