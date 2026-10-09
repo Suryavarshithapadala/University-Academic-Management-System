@@ -1,4 +1,4 @@
-# Project Video Link: https://drive.google.com/file/d/1Ju-fX-n6l0j_IRHxfHEr77hzRAeyIww-/view?usp=sharing
+# Project Video Link: 
 
 # University Academic Management System
 
